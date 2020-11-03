@@ -13,10 +13,10 @@
     },
     "editor.wordWrap": "on",
     "eslint.enable": true,
-    "eslint.packageManager": "yarn",
+    "eslint.packageManager": "npm",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "npm.packageManager": "yarn",
+    "npm.packageManager": "npm",
     "typescript.tsdk": "./node_modules/typescript/lib",
     "[markdown]": {
       "files.trimTrailingWhitespace": false

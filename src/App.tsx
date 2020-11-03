@@ -1,3 +1,4 @@
+// eslint-disable-line no-unused-vars
 import React, { FC } from 'react';
 import logo from './logo.svg';
 import './App.css';
