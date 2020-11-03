@@ -40,6 +40,8 @@ module.exports = {
     ],
     root: true,
     rules: {
+      'no-useless-constructor': 'off',
+      '@typescript-eslint/no-useless-constructor': 'error',
       'lines-between-class-members': [
         'error',
         'always',
@@ -59,14 +61,7 @@ module.exports = {
         },
       ],
       '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          'vars': 'all',
-          'args': 'after-used',
-          'argsIgnorePattern': '_',
-          'ignoreRestSiblings': false,
-          'varsIgnorePattern': '_',
-        },
+        'off',
       ],
       'import/extensions': [
         'error',

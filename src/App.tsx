@@ -1,27 +1,52 @@
 // eslint-disable-line no-unused-vars
-import React, { FC } from 'react';
-import logo from './logo.svg';
+import React, { Component, ReactElement } from 'react';
+import { Button, Card, Statistic } from 'semantic-ui-react';
 import './App.css';
 
-const App: FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+type State = {
+  count: number;
 };
+class App extends Component<unknown, State> {
+  constructor(props: unknown) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  reset(): void {
+    this.setState({ count: 0 });
+  }
+
+  increment(): void {
+    this.setState((state) => ({ count: state.count + 1 }));
+  }
+
+  render(): ReactElement {
+    const { count } = this.state;
+
+    return (
+      <div className="container">
+        <header>
+          <h1>カウンター</h1>
+        </header>
+        <Card>
+          <Statistic className="number-board">
+            <Statistic.Label>count</Statistic.Label>
+            <Statistic.Value>{count}</Statistic.Value>
+          </Statistic>
+          <Card.Content>
+            <div className="ui two buttons">
+              <Button color="red" onClick={() => this.reset()}>
+                Reset
+              </Button>
+              <Button color="red" onClick={() => this.increment()}>
+                count
+              </Button>
+            </div>
+          </Card.Content>
+        </Card>
+      </div>
+    );
+  }
+}
 
 export default App;
