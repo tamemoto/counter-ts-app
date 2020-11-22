@@ -1,36 +1,18 @@
-// eslint-disable-line no-unused-vars
-import React, { FC, useState } from 'react';
-import { Button, Card, Statistic } from 'semantic-ui-react';
+import React, { FC } from 'react';
+
+import ColorfulBeads from 'containers/molecules/ColorfulBeads';
+import CounterBoard from 'containers/organisms/CounterBoard';
+
 import './App.css';
 
-const App: FC = () => {
-  const [count, setCount] = useState(0);
-  const reset = () => setCount(0);
-  const increment = () => setCount((c) => c + 1);
-
-  return (
-    <div className="container">
-      <header>
-        <h1>カウンター</h1>
-      </header>
-      <Card>
-        <Statistic className="number-board">
-          <Statistic.Label>count</Statistic.Label>
-          <Statistic.Value>{count}</Statistic.Value>
-        </Statistic>
-        <Card.Content>
-          <div className="ui two buttons">
-            <Button color="red" onClick={reset}>
-              Reset
-            </Button>
-            <Button color="red" onClick={increment}>
-              +1
-            </Button>
-          </div>
-        </Card.Content>
-      </Card>
-    </div>
-  );
-};
+const App: FC = () => (
+  <div className="container">
+    <header>
+      <h1>ビーズカウンター</h1>
+    </header>
+    <CounterBoard />
+    <ColorfulBeads />
+  </div>
+);
 
 export default App;
