@@ -2,7 +2,7 @@ export const CounterActionType = {
   ADD: 'ADD',
   DECREMENT: 'DECREMENT',
   INCREMENT: 'INCREMENT',
-};
+} as const;
 
 type ValueOf<T> = T[keyof T];
 
