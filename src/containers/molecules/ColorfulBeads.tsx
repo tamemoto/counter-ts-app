@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
 import { useSelector } from 'react-redux';
 
-import { CounterState } from 'store/reducer';
+// import { CounterState } from 'store/reducer';
+import { CounterState } from 'features/counter';
 
 import ColorfulBeads from 'components/molecules/ColorfulBeads';
 
